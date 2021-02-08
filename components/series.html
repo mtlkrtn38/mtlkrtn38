@@ -1,0 +1,30 @@
+<div class="navbar navbar-dark bg-dark box-shadow">
+    <div class="container d-flex justify-content-between">
+        <a href="#" class="navbar-brand d-flex align-items-center">
+            <span>Popular Series</span>
+        </a>
+    </div>
+</div>
+<main class="content-min-height" ng-controller="seriesController">
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <h4 ng-if="loading && !err">Loading...</h4>
+                <h4 ng-if="err">Opps, someting went wrong...</h4>
+                <div class="col-sm-4 col-md-2 col-lg-2 cp" ng-repeat="item in list | orderBy:'title'"
+                    ng-if="$index < 21 && !loading">
+                    <div class="card mb-4 box-shadow">
+                        <img class="card-img-top" src="{{item.images['Poster Art'].url}}">
+                        <div class="card-body">
+                            <p class="card-text text-nowrap text-truncate" title="{{item.title}}">{{item.title}}</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>

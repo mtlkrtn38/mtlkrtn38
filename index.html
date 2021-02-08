@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="tr" ng-app="App">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mutlu KARTIN">
+
+    <title>DEMO Streaming</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="assets/css/style.css">
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+</head>
+
+<body ng-controller="mainController">
+    <div ng-include="'components/header.html'"></div>
+    <ui-view></ui-view>
+    <div ng-include="'components/footer.html'"></div>
+    <script src="app.js" defer></script>
+</body>
+
+</html>
