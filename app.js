@@ -47,11 +47,11 @@ app.controller("moviesController", function ($scope, postFactory) {
     postFactory.getData().then(function (res) {
         $scope.loading = false;
         $scope.list = res.data.entries.filter((item) => item.releaseYear >= 2010 && item.programType =='movie');
-        console.log(res.data.entries)
-        console.log(res.data.entries.filter((item) => item.releaseYear >= 2010 && item.programType =='movie'))
+        // console.log(res.data.entries)
+        // console.log(res.data.entries.filter((item) => item.releaseYear >= 2010 && item.programType =='movie'))
     }, function (err) {
         $scope.err = true;
-        console.log(err)
+        // console.log(err)
     });
 });
 
